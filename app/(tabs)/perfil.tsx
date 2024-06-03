@@ -21,58 +21,61 @@ const PerfilScreen: React.FC<PerfilScreenProps> = ({ navigation }) => {
 
                 {/* Opciones */}
                 <View style={styles.optionsContainer}>
-                    <Link href="/micuenta">
-                        <Text>Mi Cuenta</Text>
-                    </Link>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                        onPress={() => navigation.navigate('MiCuenta')}
+                    >
+                        <Text style={styles.optionText}>Mi Cuenta</Text>
+                    </TouchableOpacity>
 
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate('MisGanancias')}
-                    >
-                        <Text style={styles.optionText}>Mis Ganancias</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate('Privacidad')}
-                    >
-                        <Text style={styles.optionText}>Privacidad</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate('Seguridad')}
-                    >
-                        <Text style={styles.optionText}>Seguridad</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate('Cartera')}
-                    >
-                        <Text style={styles.optionText}>Cartera</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate('Ventas')}
-                    >
-                        <Text style={styles.optionText}>Ventas</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate('Ayuda')}
-                    >
-                        <Text style={styles.optionText}>Ayuda</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate('Información')}
-                    >
-                        <Text style={styles.optionText}>Información</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate('Planes')}
-                    >
-                        <Text style={styles.optionText}>Planes</Text>
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.optionItem}
+                            onPress={() => navigation.navigate('MisGanancias')}
+                        >
+                            <Text style={styles.optionText}>Mis Ganancias</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.optionItem}
+                            onPress={() => navigation.navigate('Privacidad')}
+                        >
+                            <Text style={styles.optionText}>Privacidad</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.optionItem}
+                            onPress={() => navigation.navigate('Seguridad')}
+                        >
+                            <Text style={styles.optionText}>Seguridad</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.optionItem}
+                            onPress={() => navigation.navigate('Cartera')}
+                        >
+                            <Text style={styles.optionText}>Cartera</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.optionItem}
+                            onPress={() => navigation.navigate('Ventas')}
+                        >
+                            <Text style={styles.optionText}>Ventas</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.optionItem}
+                            onPress={() => navigation.navigate('Ayuda')}
+                        >
+                            <Text style={styles.optionText}>Ayuda</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.optionItem}
+                            onPress={() => navigation.navigate('Información')}
+                        >
+                            <Text style={styles.optionText}>Información</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.optionItem}
+                            onPress={() => navigation.navigate('Planes')}
+                        >
+                            <Text style={styles.optionText}>Planes</Text>
+                        </TouchableOpacity>
                 </View>
 
                 {/* Botón de Cerrar Sesión */}

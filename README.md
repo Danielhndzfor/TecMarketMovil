@@ -24,12 +24,12 @@ Para realizar la descarga e instalación del proyecto, sigue estos pasos:
 
 Para lograr la conexión entre la app y la base es necesario hacer unas configuraciones al proyecto.
 
-1. Clona y configura el Backend del Proyecto siguiendo las indicaciones en el README.md:
+1. Clona y configura el Backend del Proyecto siguiendo las indicaciones en el [README.md](https://github.com/Danielhndzfor/TecMarketBack.git):
 
-* Dirección del Repositorio del Backend: TecMarketBack
+* Dirección del Repositorio del Backend: [TecMarketBack](https://github.com/Danielhndzfor/TecMarketBack.git)
 
-2. Una vez que el backend esté corriendo, actualiza la URL de la API en la aplicación móvil de este proyecto. Abre el archivo `api/url.js` y reemplaza `192.168.1.77` con la dirección IP de tu computadora:
-`export const API = 'http://<tu-ip-local>:3000/api';`
+2. Una vez que el backend esté corriendo, actualiza la URL de la API en la aplicación móvil de este proyecto. Abre el archivo `api/productService.ts` y reemplaza `10.0.0.27` con la dirección IP de tu computadora:
+`const API = 'http://<tu-ip-local>:3000/api';`
 
 ## Ejecución
 
@@ -70,5 +70,5 @@ Usa la aplicación Expo Go en tu dispositivo móvil o el emulador de Android par
 
 Al correr el emulador, podrás observar la siguiente pantalla:
 
-![imagen de pantalla principal](imagen_de_pantalla_principal.png)
+![imagen de pantalla principal](/assets/images/PantallaPrincipal.jpeg)
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, Alert } from 'react-native';
-import { addProductRequest } from '@/api/productService'; // Importa la función para agregar productos
+import { addProductRequest } from '@/api/productService'; 
 import * as ImagePicker from 'expo-image-picker';
 import { Picker } from '@react-native-picker/picker';
 
@@ -12,7 +12,7 @@ const Publish = () => {
     const [stock, setStock] = useState('');
     const [deliveryType, setDeliveryType] = useState('envio a domicilio');
     const [condition, setCondition] = useState('nuevo');
-    const [category, setCategory] = useState(['electronica']);
+    const [category, setCategory] = useState('electronica');
     const [images, setImages] = useState<string[]>([]);
 
     const handleSubmit = async () => {
@@ -23,7 +23,7 @@ const Publish = () => {
         formData.append('stock', stock);
         formData.append('deliveryType', deliveryType);
         formData.append('condition', condition);
-        formData.append('category', category.join(','));
+        formData.append('category', category);
 
         try {
             const response = await addProductRequest(formData);
@@ -46,7 +46,7 @@ const Publish = () => {
         setStock('');
         setDeliveryType('envio a domicilio');
         setCondition('nuevo');
-        setCategory(['electronica']);
+        setCategory('electronica');
         setImages([]);
     };
 
@@ -124,12 +124,17 @@ const Publish = () => {
             <Picker
                 selectedValue={category}
                 style={styles.picker}
-                onValueChange={(itemValue: string) => setCategory([itemValue])}
+                onValueChange={(itemValue: string) => setCategory(itemValue)}
             >
                 <Picker.Item label="electronica" value="electronica" />
                 <Picker.Item label="hogar" value="hogar" />
                 <Picker.Item label="comida" value="comida" />
-                {/* Agrega más opciones aquí si es necesario */}
+                <Picker.Item label="postres" value="postres" />
+                <Picker.Item label="bebidas" value="bebidas" />
+                <Picker.Item label="ropa" value="ropa" />
+                <Picker.Item label="libros" value="libros" />
+                <Picker.Item label="deportes" value="deportes" />
+                <Picker.Item label="otros" value="otros" />
             </Picker>
 
             <TouchableOpacity style={styles.imagePicker} onPress={selectImage}>
