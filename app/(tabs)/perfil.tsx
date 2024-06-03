@@ -1,7 +1,6 @@
 import React from 'react';
 import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import MiCuenta from '../screens/MiCuenta';
+import { Link } from 'expo-router';
 
 interface PerfilScreenProps {
     navigation: any;
@@ -22,12 +21,10 @@ const PerfilScreen: React.FC<PerfilScreenProps> = ({ navigation }) => {
 
                 {/* Opciones */}
                 <View style={styles.optionsContainer}>
-                    <TouchableOpacity 
-                        style={styles.optionItem}
-                        onPress={() => navigation.navigate({ MiCuenta })}
-                    >
-                        <Text style={styles.optionText}>Mi cuenta</Text>
-                    </TouchableOpacity>
+                    <Link href="/micuenta">
+                        <Text>Mi Cuenta</Text>
+                    </Link>
+
                     <TouchableOpacity 
                         style={styles.optionItem}
                         onPress={() => navigation.navigate('MisGanancias')}

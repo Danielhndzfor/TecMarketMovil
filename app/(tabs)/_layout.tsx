@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, Text } from 'react-native';
 import { Tabs } from 'expo-router';
-import { useColorScheme } from '@/hooks/useColorScheme';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -28,7 +27,6 @@ const SearchBar = () => {
 };
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
   const sizeAdd = 45;
 
   return (

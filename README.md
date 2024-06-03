@@ -6,9 +6,6 @@ Este proyecto contiene la aplicación móvil de TecMarket, un espacio de compra 
 
 La aplicación móvil TecMarket permite realizar la publicación de productos y poder observar los productos que son publicados. Esto permite ver los diversos productos que contiene la app.
 
-## Requisitos
-
----
 
 ## Instalación
 
