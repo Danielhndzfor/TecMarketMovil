@@ -12,13 +12,19 @@ La aplicación móvil TecMarket permite realizar la publicación de productos y 
 Para realizar la descarga e instalación del proyecto, sigue estos pasos:
 
 1. Clona el repositorio:
-`git clone https://github.com/Danielhndzfor/TecMarketMovil.git`
+    ```bash
+    git clone https://github.com/Danielhndzfor/TecMarketMovil.git
+    ```
 
 2. Navega al directorio del proyecto:
-`cd TecMarketMovil`
+    ```bash
+    cd TecMarketMovil
+    ```
 
 3. Instala las dependencias:
-`npm install`
+    ```bash
+    npm install
+    ```
 
 ### Configuración del Backend
 
@@ -30,6 +36,61 @@ Para lograr la conexión entre la app y la base es necesario hacer unas configur
 
 2. Una vez que el backend esté corriendo, actualiza la URL de la API en la aplicación móvil de este proyecto. Abre el archivo `api/productService.ts` y reemplaza `192.168.100.18` con la dirección IP de tu computadora:
 `const API = 'http://<tu-ip-local>:3000/api';`
+
+# Consulta de dirección IP
+
+Para obtener la dirección es necesario seguir los siguientes pasos:
+
+1. Abre tu terminal `cmd.exe`
+
+2. Escribe el siguiente comando:
+    ```bash
+    ipconfig
+    ```
+
+3. Te respondera algo asi:
+    ```bash
+    Configuración IP de Windows
+
+    Adaptador de Ethernet Ethernet:
+
+    Estado de los medios. . . . . . . . . . . : medios desconectados
+    Sufijo DNS específico para la conexión. . :
+
+    Adaptador de LAN inalámbrica Local Area Connection* 1:
+
+    Estado de los medios. . . . . . . . . . . : medios desconectados
+    Sufijo DNS específico para la conexión. . :
+
+    Adaptador de LAN inalámbrica Local Area Connection* 2:
+
+    Estado de los medios. . . . . . . . . . . : medios desconectados
+    Sufijo DNS específico para la conexión. . :
+
+    Adaptador de LAN inalámbrica Wi-Fi:
+
+    Sufijo DNS específico para la conexión. . :
+    Dirección IPv6 . . . . . . . . . . : 2806:261:3480:b6e:f543:d9cb:13a5:7dfc
+    Vínculo: dirección IPv6 local. . . : fe80::4b27:d9ce:531:12da%18
+    Dirección IPv4. . . . . . . . . . . . . . : 192.168.100.18
+    Máscara de subred . . . . . . . . . . . . : 255.255.255.0
+    Puerta de enlace predeterminada . . . . . : fe80::1%18
+                                        192.168.100.1
+
+    Adaptador de túnel Teredo Tunneling Pseudo-Interface:
+
+    Sufijo DNS específico para la conexión. . :
+    Dirección IPv6 . . . . . . . . . . : 2001:0:2877:7aa:28d2:55e9:4e1c:dbdd
+    Vínculo: dirección IPv6 local. . . : fe80::28d2:55e9:4e1c:dbdd%15
+    Puerta de enlace predeterminada . . . . . :
+    ```
+
+4. Nos centraremos en esta linea:
+    ```bash
+    Dirección IPv4. . . . . . . . . . . . . . : 192.168.100.18
+    ```
+
+5. Esa es nuestra dirección Ip que escribiremos en el archivo `api/productService.ts`.
 
 ## Ejecución
 
