@@ -79,3 +79,13 @@ Al correr el emulador, podrás observar la siguiente pantalla:
 
 ![imagen de pantalla principal](/assets/images/PantallaP.jpeg)
 
+---
+
+**Materia:** Desarrollo Móvil Híbrido
+**Título:** TecMarketMovil  
+**Docente:** FRANCISCO CERVANTES ZAMBRANO 
+**Autor:** Daniel Alberto Hernandez For  
+**Número de estudiante:** 20460185  
+**Programa académico:** Ingeniería Informática  
+
+---
