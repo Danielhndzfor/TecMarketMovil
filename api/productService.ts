@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API = 'http://10.0.0.27:3000/api';
+/*Aqui ingresa su dirección IPV4 entre // y :*/ 
+const API = 'http://192.168.100.18:3000/api';
 
 export const addProductRequest = async (formData: FormData) => {
     try {

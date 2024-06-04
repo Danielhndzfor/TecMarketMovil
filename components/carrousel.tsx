@@ -53,7 +53,8 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
 const styles = StyleSheet.create({
     container: {
-        height: 200,
+        height: 170,
+        marginTop: 20,
     },
     scrollViewContent: {
         alignItems: 'center',

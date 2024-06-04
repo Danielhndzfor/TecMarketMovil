@@ -1,12 +1,10 @@
 import React from 'react';
-import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import { Link } from 'expo-router';
+import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-interface PerfilScreenProps {
-    navigation: any;
-}
+const PerfilScreen: React.FC = () => {
+    const navigation = useNavigation();
 
-const PerfilScreen: React.FC<PerfilScreenProps> = ({ navigation }) => {
     return (
         <ScrollView contentContainerStyle={styles.scrollViewContainer}>
             <View style={styles.container}>
@@ -23,59 +21,49 @@ const PerfilScreen: React.FC<PerfilScreenProps> = ({ navigation }) => {
                 <View style={styles.optionsContainer}>
                     <TouchableOpacity
                         style={styles.optionItem}
-                        onPress={() => navigation.navigate('MiCuenta')}
                     >
                         <Text style={styles.optionText}>Mi Cuenta</Text>
                     </TouchableOpacity>
-
-                        <TouchableOpacity
-                            style={styles.optionItem}
-                            onPress={() => navigation.navigate('MisGanancias')}
-                        >
-                            <Text style={styles.optionText}>Mis Ganancias</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionItem}
-                            onPress={() => navigation.navigate('Privacidad')}
-                        >
-                            <Text style={styles.optionText}>Privacidad</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionItem}
-                            onPress={() => navigation.navigate('Seguridad')}
-                        >
-                            <Text style={styles.optionText}>Seguridad</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionItem}
-                            onPress={() => navigation.navigate('Cartera')}
-                        >
-                            <Text style={styles.optionText}>Cartera</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionItem}
-                            onPress={() => navigation.navigate('Ventas')}
-                        >
-                            <Text style={styles.optionText}>Ventas</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionItem}
-                            onPress={() => navigation.navigate('Ayuda')}
-                        >
-                            <Text style={styles.optionText}>Ayuda</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionItem}
-                            onPress={() => navigation.navigate('Información')}
-                        >
-                            <Text style={styles.optionText}>Información</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionItem}
-                            onPress={() => navigation.navigate('Planes')}
-                        >
-                            <Text style={styles.optionText}>Planes</Text>
-                        </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                    >
+                        <Text style={styles.optionText}>Mis Ganancias</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                    >
+                        <Text style={styles.optionText}>Privacidad</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                    >
+                        <Text style={styles.optionText}>Seguridad</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                    >
+                        <Text style={styles.optionText}>Cartera</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                    >
+                        <Text style={styles.optionText}>Ventas</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                    >
+                        <Text style={styles.optionText}>Ayuda</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                    >
+                        <Text style={styles.optionText}>Información</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.optionItem}
+                    >
+                        <Text style={styles.optionText}>Planes</Text>
+                    </TouchableOpacity>
                 </View>
 
                 {/* Botón de Cerrar Sesión */}
@@ -85,7 +73,7 @@ const PerfilScreen: React.FC<PerfilScreenProps> = ({ navigation }) => {
             </View>
         </ScrollView>
     );
-}
+};
 
 const styles = StyleSheet.create({
     scrollViewContainer: {

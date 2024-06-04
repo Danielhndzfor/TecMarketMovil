@@ -4,7 +4,6 @@ import { addProductRequest } from '@/api/productService';
 import * as ImagePicker from 'expo-image-picker';
 import { Picker } from '@react-native-picker/picker';
 
-
 const Publish = () => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -24,6 +23,16 @@ const Publish = () => {
         formData.append('deliveryType', deliveryType);
         formData.append('condition', condition);
         formData.append('category', category);
+
+        images.forEach((imageUri, index) => {
+            const uriParts = imageUri.split('.');
+            const fileType = uriParts[uriParts.length - 1];
+            formData.append('images', {
+                uri: imageUri,
+                name: `photo_${index}.${fileType}`,
+                type: `image/${fileType}`,
+            });
+        });
 
         try {
             const response = await addProductRequest(formData);
@@ -50,7 +59,6 @@ const Publish = () => {
         setImages([]);
     };
 
-    
     const selectImage = async () => {
         try {
             const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -159,7 +167,6 @@ const Publish = () => {
         </ScrollView>
     );
 };
-
 
 const styles = StyleSheet.create({
     scrollContainer: {

@@ -56,7 +56,7 @@ export default function TabLayout() {
               <FontAwesomeIcon icon="home" size={size} color={color} />
             ),
             tabBarActiveTintColor: '#5E9E6B', // Color para la pestaña activa
-            tabBarInactiveTintColor: '#CCCCCC', // Color para las pestañas inactivas
+            tabBarInactiveTintColor: 'white', // Color para las pestañas inactivas
             
           }}
         />
@@ -68,7 +68,7 @@ export default function TabLayout() {
               <FontAwesomeIcon icon="heart" size={size} color={color} />
             ),
             tabBarActiveTintColor: '#5E9E6B', // Color para la pestaña activa
-            tabBarInactiveTintColor: '#CCCCCC', // Color para las pestañas inactivas
+            tabBarInactiveTintColor: 'white', // Color para las pestañas inactivas
           }}
         />
         <Tabs.Screen
@@ -79,7 +79,7 @@ export default function TabLayout() {
               <FontAwesomeIcon icon="square-plus" size={sizeAdd} color={color} />
             ),
             tabBarActiveTintColor: '#5E9E6B', // Color para la pestaña activa
-            tabBarInactiveTintColor: '#CCCCCC', // Color para las pestañas inactivas
+            tabBarInactiveTintColor: 'white', // Color para las pestañas inactivas
           }}
         />
         <Tabs.Screen
@@ -90,7 +90,7 @@ export default function TabLayout() {
               <FontAwesomeIcon icon="bell" size={size} color={color} />
             ),
             tabBarActiveTintColor: '#5E9E6B', // Color para la pestaña activa
-            tabBarInactiveTintColor: '#CCCCCC', // Color para las pestañas inactivas
+            tabBarInactiveTintColor: 'white', // Color para las pestañas inactivas
           }}
         />
         <Tabs.Screen
@@ -101,11 +101,12 @@ export default function TabLayout() {
               <FontAwesomeIcon icon="user" size={size} color={color} />
             ),
             tabBarActiveTintColor: '#5E9E6B', // Color para la pestaña activa
-            tabBarInactiveTintColor: '#CCCCCC', // Color para las pestañas inactivas
+            tabBarInactiveTintColor: 'white', // Color para las pestañas inactivas
           }}
         />
       </Tabs>
 
+      
 
     </View>
   );

@@ -5,9 +5,9 @@ import { useFocusEffect } from '@react-navigation/native';
 import Carousel from '@/components/carrousel';
 
 const images = [
-  'https://via.placeholder.com/200',
-  'https://via.placeholder.com/200',
-  'https://via.placeholder.com/200',
+  'https://www.hogarmania.com/archivos/202207/postres-frios-xl-1280x720x80xX.jpg',
+  'https://topcleanbaleares.com/wp-content/uploads/2019/10/electronica.jpg',
+  'https://cdn2.chicmagazine.com.mx/uploads/media/2022/09/26/accesorios-moda-haran-reina-otono.jpg',
 ];
 
 const HomeScreen = ({ navigation }: { navigation: any }) => {
@@ -65,6 +65,8 @@ const HomeScreen = ({ navigation }: { navigation: any }) => {
           refreshControl={
             <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
           }
+          numColumns={2} // Agregado para mostrar dos columnas
+          contentContainerStyle={styles.flatListContent}
         />
       </View>
     </>
@@ -73,14 +75,16 @@ const HomeScreen = ({ navigation }: { navigation: any }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
+    marginTop: 20,
     flex: 1,
     backgroundColor: '#f8f8f8',
   },
+  flatListContent: {
+    justifyContent: 'space-between', // Añadido para distribuir el espacio entre los elementos
+  },
   productItem: {
     backgroundColor: '#fff',
-    marginHorizontal: 20,
-    marginVertical: 10,
+    margin: 10, // Ajustado para mejorar el espaciado
     borderRadius: 20,
     overflow: 'hidden',
     shadowColor: '#000',
@@ -88,6 +92,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 10,
     elevation: 5,
+    flexBasis: '45%', // Ajustado para mejor distribución
   },
   productImage: {
     width: '100%',

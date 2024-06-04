@@ -15,7 +15,7 @@ Para realizar la descarga e instalación del proyecto, sigue estos pasos:
 `git clone https://github.com/Danielhndzfor/TecMarketMovil.git`
 
 2. Navega al directorio del proyecto:
-`cd TecMarket`
+`cd TecMarketMovil`
 
 3. Instala las dependencias:
 `npm install`
@@ -28,17 +28,19 @@ Para lograr la conexión entre la app y la base es necesario hacer unas configur
 
 * Dirección del Repositorio del Backend: [TecMarketBack](https://github.com/Danielhndzfor/TecMarketBack.git)
 
-2. Una vez que el backend esté corriendo, actualiza la URL de la API en la aplicación móvil de este proyecto. Abre el archivo `api/productService.ts` y reemplaza `10.0.0.27` con la dirección IP de tu computadora:
+2. Una vez que el backend esté corriendo, actualiza la URL de la API en la aplicación móvil de este proyecto. Abre el archivo `api/productService.ts` y reemplaza `192.168.100.18` con la dirección IP de tu computadora:
 `const API = 'http://<tu-ip-local>:3000/api';`
 
 ## Ejecución
 
 Una vez que hayas configurado el backend y actualizado la URL de la API, puedes ejecutar la aplicación móvil. Sigue estos pasos:
 
-Asegúrate de que el backend está corriendo en `http://localhost:3000`.
+1. Asegúrate de que el backend está corriendo en `http://localhost:3000`.
 
-Inicia el servidor de desarrollo de Expo:
-`npm start`
+2. Inicia el servidor de desarrollo de Expo:
+    ```bash
+    npx expo start
+    ```
 
 Presiona la tecla `a` para abrir la aplicación en un emulador de Android. Deberías ver algo similar a esto en la terminal:
 
@@ -65,10 +67,15 @@ Logs for your project will appear below. Press Ctrl+C to exit.
 Usa la aplicación Expo Go en tu dispositivo móvil o el emulador de Android para escanear el código QR que aparece en la terminal o en el navegador.
 ```
 
+No obstante recomiendo para una mayor interacción descargar la app `Expo Go` que se encuentra en todas las tiendas de aplicaciones tanto android como ios.
+
+Al descargar en Android unicamente debes seleccionar `Scan QR code` y apunta tu camara al qr que arrojo en la terminal al ejecutar el comando de ejecución.
+
+Y eso seria todo, puede pedir permisos al momento de querer subir una imagen, tu decides si das permiso limitado o abierto.
 
 ## Pantalla Principal
 
 Al correr el emulador, podrás observar la siguiente pantalla:
 
-![imagen de pantalla principal](/assets/images/PantallaPrincipal.jpeg)
+![imagen de pantalla principal](/assets/images/PantallaP.jpeg)
 
